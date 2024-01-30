@@ -1,0 +1,6 @@
+# Use defaults
+default: true
+
+# Some markdown files do not start with a first heading,
+# eg. the GitHub README with badges.
+MD041: false

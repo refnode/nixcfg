@@ -42,3 +42,20 @@ run custom checks as required. To execute the CI/CD dev shell, execute
 ```bash
 nix develop '.#ci'
 ```
+
+## Git pre-commit checks
+
+The repository provides pre-configured git pre-commit checks.
+To enable these checks you need call the nix developer shell one time as
+show in the previous CI/CD example or non-interactive by calling an executable.
+
+```bash
+nix develop '.#ci' --command true
+```
+
+During regular commits, pre-commit only performs checks on file staged for
+commit. To perform a pre-commit check on all file, execute
+
+```bash
+nix develop '.#ci' --command pre-commit run --all-files
+```

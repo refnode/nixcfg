@@ -1,5 +1,6 @@
 {
   pkgs ? import <nixpkgs> {},
+  shellHook ? "",
   ...
 }:
 pkgs.mkShell {
@@ -7,7 +8,5 @@ pkgs.mkShell {
     alejandra
   ];
 
-  shellHook = ''
-    echo "Nix development env for tasks running during CI/CD workflows"
-  '';
+  inherit shellHook;
 }
