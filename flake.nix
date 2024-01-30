@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nix-darwin.url = "github:lnl7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -12,6 +16,8 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
+    nix-darwin,
+    home-manager,
     pre-commit-hooks,
     ...
   }: let
@@ -55,5 +61,9 @@
         ci = import ./ci.nix {inherit pkgs shellHook;};
       }
     );
+
+    darwinConfigurations = {};
+
+    nixosConfigurations = {};
   };
 }
