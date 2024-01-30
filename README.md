@@ -30,5 +30,15 @@ If have a suggestion to improve something, feel free to open an
 ├── overlays               # customizations on existing nixpkgs used in this repo
 ├── packages               # my packages
 ├── templates              # templates as starting points
-└── users                  # user's $HOME configs
+├── users                  # user's $HOME configs
+└── ci.nix                 # the nix develop env used during CI/CD runs
+```
+
+## CI/CD
+
+For CI/CD workflows the repo provides a nix developer shell environment to
+run custom checks as required. To execute the CI/CD dev shell, execute
+
+```bash
+nix develop '.#ci'
 ```

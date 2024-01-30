@@ -30,5 +30,15 @@
       in
         pkgs.alejandra
     );
+
+    devShells = forAllSystems (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+
+      in {
+        ci = import ./ci.nix {inherit pkgs;};
+      }
+    );
+
   };
 }

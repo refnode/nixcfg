@@ -27,3 +27,5 @@ jobs:
         run: nix flake check --all-systems
       - name: Check the code matching standard style using alejandra
         run: nix fmt
+      - name: Run custom tests inside CI/CD shell
+        run: nix develop '.#ci' --command true
