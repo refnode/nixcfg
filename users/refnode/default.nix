@@ -39,4 +39,9 @@
     vimAlias = true;
     vimdiffAlias = true;
   };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
