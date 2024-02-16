@@ -9,8 +9,9 @@
 }: let
   # system = "aarch64-darwin";
   pkgs = nixpkgs.legacyPackages.${system};
+  systemFn = nix-darwin.lib.darwinSystem;
 in
-  nix-darwin.lib.darwinSystem {
+  systemFn {
     modules = [
       ../hosts/darwin-base.nix
       {_module.args = {inherit flake;};}
