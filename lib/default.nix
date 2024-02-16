@@ -5,17 +5,19 @@
   system,
   user,
   flake,
+  inputs,
   ...
 }: let
   # system = "aarch64-darwin";
   pkgs = nixpkgs.legacyPackages.${system};
   systemFn = nix-darwin.lib.darwinSystem;
+  home-manager = inputs.home-manager.darwinModules.home-manager;
 in
   systemFn {
     modules = [
       ../hosts/darwin-base.nix
       {_module.args = {inherit flake;};}
-      home-manager.darwinModules.home-manager
+      home-manager
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;

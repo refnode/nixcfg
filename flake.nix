@@ -68,7 +68,7 @@
     darwinConfigurations = let
       system = "aarch64-darwin";
     in {
-      defiant = import ./lib {inherit nixpkgs nix-darwin home-manager system user flake;};
+      defiant = import ./lib {inherit nixpkgs nix-darwin home-manager system user flake inputs;};
     };
 
     nixosConfigurations = {};
