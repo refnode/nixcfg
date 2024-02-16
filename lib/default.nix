@@ -8,7 +8,7 @@
   inputs,
   ...
 }: let
-  # system = "aarch64-darwin";
+  userHomeConfig = ../users/${user};
   pkgs = nixpkgs.legacyPackages.${system};
   systemFn = nix-darwin.lib.darwinSystem;
   home-manager = inputs.home-manager.darwinModules.home-manager;
@@ -21,7 +21,7 @@ in
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.${user} = import ../${user}.nix {inherit pkgs user;};
+        home-manager.users.${user} = import userHomeConfig {inherit pkgs user;};
         # Optionally, use home-manager.extraSpecialArgs to pass
         # arguments to home.nix
         # home-manager.extraSpecialArgs = { inherit lib; };
