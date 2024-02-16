@@ -34,6 +34,26 @@ If have a suggestion to improve something, feel free to open an
 └── ci.nix                 # the nix develop env used during CI/CD runs
 ```
 
+## MacBook Setup
+
+The repo provides a nix-darwin configuration that embeds a home-manager
+configuration. To bootstrap the configuration for the first time (after the
+Nix Installer Run was performed) it's required to enter the target dir of this
+flake and to execute the following command:
+
+```bash
+nix run nix-darwin -- switch --flake '.#'
+
+```
+
+After the first run if nix-darwin, the nix-darwin tools are direct accessible
+with the terminal. For rebuilds after configuration changes it's only
+to run
+
+```bash
+darwin-rebuild switch --flake $HOME/path/to/flake-dir
+```
+
 ## CI/CD
 
 For CI/CD workflows the repo provides a nix developer shell environment to
