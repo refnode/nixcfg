@@ -8,6 +8,7 @@
   inputs,
   ...
 }: let
+  osConfig = ../hosts/darwin-base.nix;
   userHomeConfig = ../users/${user};
   pkgs = nixpkgs.legacyPackages.${system};
   systemFn = nix-darwin.lib.darwinSystem;
@@ -15,7 +16,7 @@
 in
   systemFn {
     modules = [
-      ../hosts/darwin-base.nix
+      osConfig
       {_module.args = {inherit flake;};}
       home-manager
       {
