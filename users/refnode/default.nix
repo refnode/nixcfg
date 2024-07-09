@@ -1,15 +1,10 @@
 {
   pkgs,
+  pkgsUnstable,
   user,
   ...
-}: {
-  # Don't change this when you change package input. Leave it alone.
-  home.stateVersion = "23.11";
-
-  # specify my home-manager configs
-  home.packages = with pkgs; [
-    ripgrep
-    fd
+}: let
+  userPkgs = with pkgs; [
     curl
     less
     htop
@@ -19,6 +14,19 @@
     ref-rebuild
     ref-sysupdate
   ];
+
+  userPkgsUnstable = with pkgsUnstable; [
+    fd
+    bat
+    eza
+    ripgrep
+  ];
+in {
+  # Don't change this when you change package input. Leave it alone.
+  home.stateVersion = "23.11";
+
+  # specify my home-manager configs
+  home.packages = userPkgs ++ userPkgsUnstable;
 
   home.sessionVariables = {
     PAGER = "less";

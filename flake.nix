@@ -46,6 +46,13 @@
         ];
         inherit system;
       };
+
+    unstablePkgsForSystem = system:
+      import nixpkgs-unstable {
+        # if you have additional overlays, you may add them here
+        overlays = [];
+        inherit system;
+      };
   in {
     formatter = forAllSystems (
       system: let
@@ -82,8 +89,20 @@
     darwinConfigurations = let
       system = "aarch64-darwin";
       pkgs = pkgsForSystem system;
+      pkgsUnstable = unstablePkgsForSystem system;
     in {
-      defiant = import ./lib {inherit pkgs nix-darwin home-manager system user flake inputs;};
+      defiant = import ./lib {
+        inherit
+          pkgs
+          pkgsUnstable
+          nix-darwin
+          home-manager
+          system
+          user
+          flake
+          inputs
+          ;
+      };
     };
 
     nixosConfigurations = {};

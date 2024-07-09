@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgsUnstable,
   nix-darwin,
   home-manager,
   system,
@@ -22,7 +23,7 @@ in
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.${user} = import userHomeConfig {
-          inherit pkgs user;
+          inherit pkgs pkgsUnstable user;
         };
         # Optionally, use home-manager.extraSpecialArgs to pass
         # arguments to home.nix
