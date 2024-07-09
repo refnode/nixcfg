@@ -17,6 +17,7 @@
     jq
     yq
     ref-rebuild
+    ref-sysupdate
   ];
 
   home.sessionVariables = {
