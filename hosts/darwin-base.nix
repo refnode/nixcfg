@@ -51,7 +51,7 @@
       extra-sandbox-paths = [];
       max-jobs = "auto";
       require-sigs = true;
-      sandbox = true;
+      sandbox = false;
       # substituters = [];
       # trusted-public-keys = [];
     };
