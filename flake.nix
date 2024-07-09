@@ -32,6 +32,20 @@
     ];
 
     forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+
+    # add local scripts as derivations using an overlay
+    # could be also done by just passing additional args to the submodules
+    # using the overlay approach, the repo local derivations are addressable
+    # by pkgs.myderivation in the submodule
+    localOverlays = import ./overlays;
+
+    pkgsForSystem = system:
+      import nixpkgs {
+        overlays = [
+          localOverlays
+        ];
+        inherit system;
+      };
   in {
     formatter = forAllSystems (
       system: let
@@ -67,8 +81,9 @@
 
     darwinConfigurations = let
       system = "aarch64-darwin";
+      pkgs = pkgsForSystem system;
     in {
-      defiant = import ./lib {inherit nixpkgs nix-darwin home-manager system user flake inputs;};
+      defiant = import ./lib {inherit pkgs nix-darwin home-manager system user flake inputs;};
     };
 
     nixosConfigurations = {};

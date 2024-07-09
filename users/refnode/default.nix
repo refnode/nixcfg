@@ -16,6 +16,7 @@
     tmux
     jq
     yq
+    ref-rebuild
   ];
 
   home.sessionVariables = {
