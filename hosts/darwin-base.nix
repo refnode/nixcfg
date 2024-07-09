@@ -54,6 +54,9 @@
       sandbox = false;
       # substituters = [];
       # trusted-public-keys = [];
+      trusted-users = [
+        "@admin"
+      ];
     };
   };
 
