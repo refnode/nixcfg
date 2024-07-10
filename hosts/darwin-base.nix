@@ -62,6 +62,7 @@
 
   programs.zsh.enable = true;
 
+  # TODO https://discourse.nixos.org/t/give-name-label-comment-to-generations/45355
   system.configurationRevision = flake.rev or flake.dirtyRev or null;
 
   # Used for backwards compatibility,
