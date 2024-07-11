@@ -13,6 +13,7 @@
     yq
     ref-rebuild
     ref-sysupdate
+    ref-ykey-check
     ref-main
     ref-mail
     ref-mail-cd
