@@ -17,6 +17,7 @@
     ref-mail
     ref-mail-cd
     ref-mail-cdv
+    ref-irc
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
