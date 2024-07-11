@@ -14,6 +14,7 @@
     ref-rebuild
     ref-sysupdate
     ref-main
+    ref-mail
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
