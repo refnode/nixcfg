@@ -15,6 +15,7 @@
     ref-sysupdate
     ref-main
     ref-mail
+    ref-mail-cd
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
