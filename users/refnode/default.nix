@@ -13,6 +13,7 @@
     yq
     ref-rebuild
     ref-sysupdate
+    ref-main
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
