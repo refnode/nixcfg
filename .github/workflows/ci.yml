@@ -29,4 +29,4 @@ jobs:
       - name: Check the code matching standard style using alejandra
         run: nix fmt
       - name: Run custom tests inside CI/CD shell
-        run: nix develop '.#ci' --command pre-commit run --all-files
+        run: nix develop --command pre-commit run --all-files

@@ -79,7 +79,7 @@
         };
         shellHook = preCommitCheck.shellHook;
       in {
-        ci = import ./ci.nix {inherit pkgs shellHook;};
+        default = import ./shell.nix {inherit pkgs shellHook;};
       }
     );
 
