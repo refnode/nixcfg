@@ -4,4 +4,5 @@ final: prev: {
   ref-main = final.callPackage ../packages/ref-main {};
   ref-mail = final.callPackage ../packages/ref-mail {};
   ref-mail-cd = final.callPackage ../packages/ref-mail-cd {};
+  ref-mail-cdv = final.callPackage ../packages/ref-mail-cdv {};
 }
