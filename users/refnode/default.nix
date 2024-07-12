@@ -18,6 +18,7 @@
     ref-mail
     ref-mail-cd
     ref-mail-cdv
+    ref-mail-sync
     ref-irc
   ];
 
