@@ -13,6 +13,7 @@
     yq
     pdfgrep
     jasper
+    abook
     darwin.iproute2mac
     ref-rebuild
     ref-sysupdate
