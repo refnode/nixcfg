@@ -36,6 +36,7 @@
     eza
     ripgrep
     awscli2
+    lazygit
     glab
     lima
     docker-client
