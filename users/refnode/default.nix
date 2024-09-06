@@ -11,6 +11,7 @@
     tmux
     jq
     yq
+    direnv
     pdfgrep
     jasper
     abook
