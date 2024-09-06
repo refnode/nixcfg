@@ -49,6 +49,7 @@
     gopls
     goreleaser
     yubikey-manager
+    platformio
   ];
 in {
   # Don't change this when you change package input. Leave it alone.
