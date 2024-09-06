@@ -28,6 +28,7 @@
     eza
     ripgrep
     lima
+    docker-client
   ];
 in {
   # Don't change this when you change package input. Leave it alone.
