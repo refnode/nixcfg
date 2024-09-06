@@ -53,6 +53,7 @@
     go
     gopls
     goreleaser
+    nodejs_22
     yubikey-manager
     platformio
   ];
