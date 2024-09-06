@@ -11,6 +11,7 @@
     tmux
     jq
     yq
+    yamllint
     mas
     direnv
     pdfgrep
