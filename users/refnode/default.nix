@@ -12,6 +12,7 @@
     jq
     yq
     yamllint
+    nodePackages.jsonlint
     mas
     direnv
     pdfgrep
