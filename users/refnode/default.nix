@@ -35,6 +35,7 @@
     docker-client
     fluxcd
     go
+    gopls
     goreleaser
   ];
 in {
