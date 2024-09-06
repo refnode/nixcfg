@@ -20,6 +20,7 @@
     ref-mail-cdv
     ref-mail-sync
     ref-irc
+    cookiecutter
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
