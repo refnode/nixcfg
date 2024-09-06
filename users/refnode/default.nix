@@ -38,6 +38,7 @@
     awscli2
     lazygit
     glab
+    graphviz
     lima
     docker-client
     fluxcd
