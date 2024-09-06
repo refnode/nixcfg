@@ -30,6 +30,7 @@
     ripgrep
     lima
     docker-client
+    fluxcd
   ];
 in {
   # Don't change this when you change package input. Leave it alone.
