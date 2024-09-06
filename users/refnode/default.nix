@@ -19,6 +19,7 @@
     jasper
     abook
     darwin.iproute2mac
+    universal-ctags
     ref-rebuild
     ref-sysupdate
     ref-ykey-check
