@@ -22,6 +22,7 @@
     ref-irc
     cookiecutter
     qmk
+    git-annex
     gopass
     gopass-jsonapi
     zenith
