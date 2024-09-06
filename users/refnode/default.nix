@@ -30,6 +30,7 @@
     gopass
     gopass-jsonapi
     zenith
+    wezterm
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
