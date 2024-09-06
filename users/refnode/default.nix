@@ -23,6 +23,7 @@
     cookiecutter
     gopass
     gopass-jsonapi
+    zenith
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
