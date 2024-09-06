@@ -36,6 +36,7 @@
     eza
     ripgrep
     awscli2
+    glab
     lima
     docker-client
     fluxcd
