@@ -24,6 +24,7 @@
     qmk
     git-annex
     git-bug
+    gh
     gopass
     gopass-jsonapi
     zenith
