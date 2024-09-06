@@ -21,6 +21,7 @@
     ref-mail-sync
     ref-irc
     cookiecutter
+    qmk
     gopass
     gopass-jsonapi
     zenith
