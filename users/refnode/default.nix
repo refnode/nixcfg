@@ -23,6 +23,7 @@
     cookiecutter
     qmk
     git-annex
+    git-bug
     gopass
     gopass-jsonapi
     zenith
