@@ -34,6 +34,7 @@
     lima
     docker-client
     fluxcd
+    go
     goreleaser
   ];
 in {
