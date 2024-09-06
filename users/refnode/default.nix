@@ -21,6 +21,8 @@
     ref-mail-sync
     ref-irc
     cookiecutter
+    gopass
+    gopass-jsonapi
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
