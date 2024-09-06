@@ -11,6 +11,7 @@
     tmux
     jq
     yq
+    pdfgrep
     ref-rebuild
     ref-sysupdate
     ref-ykey-check
@@ -39,6 +40,8 @@
     lazygit
     glab
     graphviz
+    plantuml-c4
+    ffmpeg_7
     lima
     docker-client
     fluxcd
