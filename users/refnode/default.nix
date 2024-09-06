@@ -48,6 +48,7 @@
     go
     gopls
     goreleaser
+    yubikey-manager
   ];
 in {
   # Don't change this when you change package input. Leave it alone.
