@@ -31,6 +31,7 @@
     bat
     eza
     ripgrep
+    awscli2
     lima
     docker-client
     fluxcd
