@@ -53,6 +53,7 @@
     graphviz
     plantuml-c4
     ffmpeg_7
+    msmtp
     lima
     docker-client
     fluxcd
