@@ -46,6 +46,7 @@
     eza
     ripgrep
     awscli2
+    google-cloud-sdk
     lazygit
     glab
     graphviz
