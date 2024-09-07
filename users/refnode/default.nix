@@ -18,6 +18,7 @@
     pdfgrep
     jasper
     abook
+    lf
     darwin.iproute2mac
     universal-ctags
     ref-rebuild
