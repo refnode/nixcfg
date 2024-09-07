@@ -64,6 +64,26 @@
     nodejs_22
     yubikey-manager
     platformio
+    # encryption
+    sops
+    # kubernetes tools
+    kubectl
+    kubectx
+    kubelogin
+    kubelogin-oidc
+    krew
+    kustomize
+    kube-linter
+    kubeconform
+    kind
+    k9s
+    stern
+    k6
+    openshift
+    dive
+    crane
+    sonobuoy
+    kubernetes-helm
   ];
 in {
   # Don't change this when you change package input. Leave it alone.
