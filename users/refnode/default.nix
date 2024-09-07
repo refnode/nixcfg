@@ -42,6 +42,10 @@
     htmlq
     # crypto
     gnupg
+    # backup tools
+    borgbackup
+    borgmatic
+    rclone
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
