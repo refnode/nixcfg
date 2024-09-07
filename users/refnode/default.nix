@@ -83,7 +83,8 @@
     dive
     crane
     sonobuoy
-    kubernetes-helm
+    ##
+    sqlite
   ];
 in {
   # Don't change this when you change package input. Leave it alone.
