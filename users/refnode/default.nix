@@ -40,6 +40,8 @@
     zenith
     wezterm
     htmlq
+    # crypto
+    gnupg
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
