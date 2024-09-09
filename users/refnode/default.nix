@@ -40,6 +40,7 @@
     zenith
     wezterm
     htmlq
+    lima
     # crypto
     gnupg
     # backup tools
@@ -61,7 +62,6 @@
     plantuml-c4
     ffmpeg_7
     msmtp
-    lima
     docker-client
     fluxcd
     go
