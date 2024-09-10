@@ -61,6 +61,7 @@
     qrencode
     wdiff
     cmake
+    exiftool
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
