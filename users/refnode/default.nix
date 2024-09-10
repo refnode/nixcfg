@@ -60,6 +60,7 @@
     urlscan
     qrencode
     wdiff
+    cmake
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
