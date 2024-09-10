@@ -55,6 +55,7 @@
     tealdeer
     tree
     socat
+    slides
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
