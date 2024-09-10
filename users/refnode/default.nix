@@ -58,6 +58,7 @@
     slides
     websocat
     urlscan
+    qrencode
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
