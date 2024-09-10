@@ -9,6 +9,7 @@
     less
     htop
     tmux
+    reattach-to-user-namespace
     jq
     yq
     yamllint
