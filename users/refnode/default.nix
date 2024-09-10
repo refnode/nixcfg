@@ -52,6 +52,7 @@
     unixtools.watch
     fswatch
     keepassxc
+    tealdeer
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
