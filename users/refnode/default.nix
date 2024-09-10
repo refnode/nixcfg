@@ -54,6 +54,7 @@
     keepassxc
     tealdeer
     tree
+    socat
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
