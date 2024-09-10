@@ -56,6 +56,7 @@
     tree
     socat
     slides
+    websocat
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
