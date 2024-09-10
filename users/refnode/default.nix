@@ -47,6 +47,7 @@
     borgbackup
     borgmatic
     rclone
+    tcptraceroute
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
