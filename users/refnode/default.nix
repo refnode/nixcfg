@@ -53,6 +53,7 @@
     fswatch
     keepassxc
     tealdeer
+    tree
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
