@@ -59,6 +59,7 @@
     websocat
     urlscan
     qrencode
+    wdiff
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
