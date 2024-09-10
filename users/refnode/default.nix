@@ -57,6 +57,7 @@
     socat
     slides
     websocat
+    urlscan
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
