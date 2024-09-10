@@ -62,6 +62,7 @@
     wdiff
     cmake
     exiftool
+    figlet
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
