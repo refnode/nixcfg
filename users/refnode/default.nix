@@ -51,6 +51,7 @@
     tcptraceroute
     unixtools.watch
     fswatch
+    keepassxc
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
