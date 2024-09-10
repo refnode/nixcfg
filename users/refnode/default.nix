@@ -49,6 +49,7 @@
     rclone
     tcptraceroute
     unixtools.watch
+    fswatch
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
