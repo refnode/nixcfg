@@ -48,6 +48,7 @@
     borgmatic
     rclone
     tcptraceroute
+    unixtools.watch
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
