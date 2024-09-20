@@ -44,6 +44,7 @@
     lima
     # crypto
     gnupg
+    pwgen
     # backup tools
     borgbackup
     borgmatic
