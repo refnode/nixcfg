@@ -63,6 +63,8 @@
     cmake
     exiftool
     figlet
+    #
+    vlc-bin-universal
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
