@@ -68,6 +68,7 @@
     vlc-bin-universal
     # contacts / calendar
     vdirsyncer
+    khard
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
