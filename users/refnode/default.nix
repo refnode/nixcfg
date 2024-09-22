@@ -66,6 +66,8 @@
     figlet
     #
     vlc-bin-universal
+    # contacts / calendar
+    vdirsyncer
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
