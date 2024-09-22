@@ -69,6 +69,7 @@
     # contacts / calendar
     vdirsyncer
     khard
+    khal
   ];
 
   userPkgsUnstable = with pkgsUnstable; [
