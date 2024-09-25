@@ -117,6 +117,10 @@
     mob
   ];
 in {
+  imports = [
+    ./modules/zsh.nix
+  ];
+
   # Don't change this when you change package input. Leave it alone.
   home.stateVersion = "23.11";
 
@@ -133,25 +137,10 @@ in {
   home.homeDirectory = pkgs.lib.mkForce "/Users/${user}";
 
   programs.home-manager.enable = true;
-  programs.zsh = {
-    enable = true;
-    defaultKeymap = "viins";
-    dotDir = ".config/zsh";
-  };
   programs.neovim = {
     enable = true;
     defaultEditor = true;
     vimAlias = true;
     vimdiffAlias = true;
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
   };
 }
