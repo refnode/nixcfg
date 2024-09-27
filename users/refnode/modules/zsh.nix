@@ -4,6 +4,17 @@
     defaultKeymap = "viins";
     dotDir = ".config/zsh";
 
+    autocd = true;
+
+    dirHashes = {
+      bin = "$HOME/bin";
+      gh = "$HOME/src/github.com";
+      ref = "$HOME/src/github.com/refnode";
+      dl = "$HOME/Downloads";
+      tmp = "$HOME/tmp";
+      docs = "$HOME/Documents";
+    };
+
     history.extended = true;
     history.ignoreDups = true;
     history.ignorePatterns = [
