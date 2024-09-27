@@ -3,6 +3,18 @@
     enable = true;
     defaultKeymap = "viins";
     dotDir = ".config/zsh";
+
+    history.extended = true;
+    history.ignoreDups = true;
+    history.ignorePatterns = [
+      "kill *"
+      "gopass *"
+    ];
+    history.ignoreSpace = true;
+    history.save = 10000;
+    history.share = true;
+    history.size = 10000;
+
     initExtra = builtins.readFile ./zsh.sh;
   };
 
