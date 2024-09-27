@@ -11,6 +11,16 @@ bindkey -M vicmd '/' fzf-history-widget
 bindkey -M vicmd ' ff' fzf-file-widget
 bindkey -M vicmd ' fd' fzf-cd-widget
 
+# the check wants to see the curly braces quoted, disfunctional
+# shellcheck disable=SC2139
+alias -s {yaml,yml,json,toml}='$EDITOR'
+# shellcheck disable=SC2139
+alias -s {txt,md,adoc,rst}='$EDITOR'
+# shellcheck disable=SC2139
+alias -s {rs,go,py}='$EDITOR'
+# shellcheck disable=SC2139
+alias -s {sql,csv}='$EDITOR'
+
 # source non-nix managed local zsh configuration
 if [ -f "$ZDOTDIR/.local.zshrc" ]; then
     # TODO need to check for better style later, works atm
