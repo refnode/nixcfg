@@ -4,3 +4,10 @@
 # shellcheck disable=SC2148
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey -r '^['
+
+# source non-nix managed local zsh configuration
+if [ -f "$ZDOTDIR/.local.zshrc" ]; then
+    # TODO need to check for better style later, works atm
+    # shellcheck disable=SC1091
+    source "$ZDOTDIR/.local.zshrc"
+fi
