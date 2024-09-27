@@ -15,6 +15,9 @@
     history.share = true;
     history.size = 10000;
 
+    autosuggestion.enable = true;
+    autosuggestion.highlight = "fg=#d8dee9,bg=#4c566a";
+
     initExtra = builtins.readFile ./zsh.sh;
   };
 
