@@ -6,6 +6,33 @@
     initExtra = builtins.readFile ./zsh.sh;
   };
 
+  # enable the fzf zsh integration by default history, file and directory
+  # fuzzy searches are available on zsh vi insert mode. As I prefer to
+  # use fzf in vi cmd mode, I normally don't need the keymaps provided,
+  # but it's more effort to skip them out atm. I don't like finger
+  # breaking ctrl/option sport on regular keyboards.
+  programs.fzf = {
+    enable = true;
+    changeDirWidgetCommand = "fd --type d";
+    changeDirWidgetOptions = ["--preview 'tree -C {} | head -200'"];
+    colors = {
+      bg = "#1e1e1e";
+      "bg+" = "#1e1e1e";
+      fg = "#d4d4d4";
+      "fg+" = "#d4d4d4";
+    };
+    defaultCommand = "fd --type f";
+    defaultOptions = ["--height 40%" "--border" "--prompt='> '"];
+    fileWidgetCommand = "fd --type f";
+    fileWidgetOptions = ["--preview 'bat --style=numbers --color=always --line-range :500 {}'"];
+    historyWidgetOptions = [
+      "--sort"
+      "--exact"
+    ];
+    tmux.enableShellIntegration = true;
+    tmux.shellIntegrationOptions = ["-d 40%"];
+  };
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
