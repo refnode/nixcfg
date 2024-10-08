@@ -32,6 +32,20 @@
     initExtra = builtins.readFile ./zsh.sh;
   };
 
+  # https://direnv.net/man/direnv.toml.1.html
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+    config = {
+      whitelist = {
+        prefix = [
+          "~/src/github.com/refnode/nixcfg.git"
+        ];
+      };
+    };
+  };
+
   # enable the fzf zsh integration by default history, file and directory
   # fuzzy searches are available on zsh vi insert mode. As I prefer to
   # use fzf in vi cmd mode, I normally don't need the keymaps provided,
