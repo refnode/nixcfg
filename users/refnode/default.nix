@@ -31,6 +31,7 @@
     ref-mail-cdv
     ref-mail-sync
     ref-irc
+    ref-pathlist
     cookiecutter
     qmk
     git-annex

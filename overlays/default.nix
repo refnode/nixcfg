@@ -8,4 +8,5 @@ final: prev: {
   ref-mail-cd = final.callPackage ../packages/ref-mail-cd {};
   ref-mail-cdv = final.callPackage ../packages/ref-mail-cdv {};
   ref-irc = final.callPackage ../packages/ref-irc {};
+  ref-pathlist = final.callPackage ../packages/ref-pathlist {};
 }
