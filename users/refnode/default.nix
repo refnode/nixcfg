@@ -128,7 +128,7 @@ in {
   home.packages = userPkgs ++ userPkgsUnstable;
 
   home.sessionVariables = {
-    PAGER = "less";
+    PAGER = "${pkgs.bat}/bin/bat";
     CLICLOLOR = 1;
     EDITOR = "nvim";
   };
