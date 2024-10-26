@@ -65,6 +65,7 @@
     cmake
     exiftool
     figlet
+    just
     #
     vlc-bin-universal
     # contacts / calendar
@@ -113,6 +114,9 @@
     dive
     crane
     sonobuoy
+    opentofu
+    symlink-opentofu-terraform
+    kubeone
     ##
     sqlite
     mob
