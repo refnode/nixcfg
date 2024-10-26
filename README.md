@@ -94,28 +94,68 @@ to run
 darwin-rebuild switch --flake $HOME/path/to/flake-dir
 ```
 
-## CI/CD
+## Development
 
-For CI/CD workflows the repo provides a nix developer shell environment to
-run custom checks as required. To execute the CI/CD dev shell, execute
+### Nix Developer Shell
+
+This repo defines a nix shell environment with the tools required to perform
+changes to the repo. All needed is a working Nix installation.
+
+To enter the nix shell, cd into the nix repo and then execute the default
+shell as defined in `shell.nix`.
 
 ```bash
-nix develop '.#ci'
+nix develop
 ```
 
-## Git pre-commit checks
+### Automate using the Nix Developer Shell
 
-The repository provides pre-configured git pre-commit checks.
-To enable these checks you need call the nix developer shell one time as
-show in the previous CI/CD example or non-interactive by calling an executable.
+To automate using the Nix Developer Shell, [direnv](https://direnv.net) is
+recommended. Nix provides a great integration for the used shell and direnv
+in the Home Manager project. To let direnv know that it should use the
+shell definition provided by this Flake, the `.envrc` file is needed with
+the content `use flake`.
+
+### Git pre-commit checks
+
+Git pre-commit checks uses the [Git Hooks Mechanism](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks)
+to call an executable before committing changes to you local git repository.
+
+This enables you to define some checks you like to perform, eg. to prevent you
+committing secrets, malformed source code or other stuff you don't like to see
+in the repo.
+
+As a lot of checks are probably similar for many developers, the project
+[pre-commit.com](https://pre-commit.com) provides a flexible tooling to declare
+and integrate checks for this Git Hook.
+
+The Nix Developer Shell in this repo integrates the pre-commit.com tooling and
+uses activate some checks for the pre-commit stage.
+
+It's automatically activated entering the nix shell the first time and can be
+manual prepared performing a command in the nix shell.
 
 ```bash
-nix develop '.#ci' --command true
+# Executing a command in the subshell to trigger the pre-commit shell activation
+nix develop --command true
 ```
 
 During regular commits, pre-commit only performs checks on file staged for
-commit. To perform a pre-commit check on all file, execute
+commit. A check on all files in the repo can be executed with the followin
+command:
 
 ```bash
-nix develop '.#ci' --command pre-commit run --all-files
+nix develop --command pre-commit run --all-files
+```
+
+### CI/CD
+
+The nix shell is quite useful for regular development tasks. It becomes more
+useful when it is used with CI/CD workflows. In contrast to the almost
+interactive nix shell usage during development task, during a CI/CD workflow
+you need to call tools non-interactive inside the nix shell. This is done
+with the `--command` flag, given the tool you want to execute in the shell.
+
+```bash
+nix develop --command some-custom-check
 ```
