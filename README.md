@@ -34,6 +34,46 @@ If have a suggestion to improve something, feel free to open an
 └── ci.nix                 # the nix develop env used during CI/CD runs
 ```
 
+## Getting started
+
+### Install Nix
+
+There are two ways to install Nix on your system. The way the Nix project
+explains it on the [Nix Download page](https://nixos.org/download/), and the
+[Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer).
+
+Both ways are fine, but I prefer the Determinate Systems Nix Installer which
+is written Rust and in my opinion gives you a bit more control through the
+installation process.
+
+To install Nix on your target system (without relying on the installer shell
+script), perform the following steps:
+
+```bash
+# Download the installer for your CPU Arch/OS from the
+# [release page](https://github.com/DeterminateSystems/nix-installer/releases)
+
+# Rename the downloaded binary to `nix-installer` and move it to $HOME/bin
+# (just for the readme consistency)
+
+# Make the installer binay executable
+chmod 0755 ~/bin/nix-installer
+
+# On macOs remove the quarantine flag if need
+xattr -d com.apple.quarantine ~/bin/nix-installer
+
+# Install Nix on your target system and if needed, you can directly pass
+# extra config parameters with --extra-conf. These extra conf parameters get
+# joined together into the config file /etc/nix/nix.conf.
+# A typical use case is the binary cache in restricted environments
+
+# Install Nix without extra conf
+~/bin/nix-installer install
+
+# Install Nix with a substituters extra conf
+~/bin/nix-installer install --extra-conf 'substituters = http://cache.example.com/'
+```
+
 ## MacBook Setup
 
 The repo provides a nix-darwin configuration that embeds a home-manager
