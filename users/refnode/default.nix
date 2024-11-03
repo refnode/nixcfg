@@ -32,6 +32,7 @@
     ref-mail-sync
     ref-irc
     ref-pathlist
+    ref-git-bare-clone-update
     cookiecutter
     qmk
     git-annex
