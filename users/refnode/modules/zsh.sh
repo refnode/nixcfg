@@ -21,6 +21,38 @@ alias -s {rs,go,py}='$EDITOR'
 # shellcheck disable=SC2139
 alias -s {sql,csv}='$EDITOR'
 
+
+# fzf widget to filter on a list of git worktrees in $HOME/src
+# The base of this code is the fzf-cd-widget distributed by the fzf project.
+# Customization of cmd and PREVIEW_OPTS to see the first 20 commit log
+# messages as preview for the current selected directory.
+fzf-git-widget() {
+  setopt localoptions pipefail no_aliases 2> /dev/null
+  local cmd="fd --max-depth=6 --hidden --type=file '^\.git$' $HOME/src | sed -e 's/\/\.git$//'"
+  local PREVIEW_OPTS="--preview 'cd {} && git log -20'"
+  # shellcheck disable=SC2155
+  local dir=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $PREVIEW_OPTS" fzf +m)
+
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
+  zle push-line # Clear buffer. Auto-restored on next prompt.
+  # shellcheck disable=SC2034 # wrong interpretation, BUFFER is used by zle accept-line 
+  # shellcheck disable=SC2296
+  BUFFER="builtin cd -- ${(q)dir:a}"
+  zle accept-line
+  local ret=$?
+  unset dir # ensure this doesn't end up appearing in prompt expansion
+  zle reset-prompt
+  return $ret
+}
+
+# Register fzf-git-widget add key bindings for vicmd mode
+zle     -N             fzf-git-widget
+bindkey -M vicmd ' fg' fzf-git-widget
+
+
 # source non-nix managed local zsh configuration
 if [ -f "$ZDOTDIR/.local.zshrc" ]; then
     # TODO need to check for better style later, works atm
