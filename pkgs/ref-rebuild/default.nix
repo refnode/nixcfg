@@ -1,7 +1,9 @@
 {
-  writeShellScriptBin,
+  writeShellApplication,
   pkgs,
 }:
-writeShellScriptBin "ref-rebuild" ''
-  darwin-rebuild switch --flake $HOME/src/github.com/refnode/nixcfg.git/main
-''
+writeShellApplication {
+  name = "ref-rebuild";
+
+  text = builtins.readFile ./script.sh;
+}
