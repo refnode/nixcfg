@@ -115,7 +115,6 @@
     crane
     sonobuoy
     opentofu
-    symlink-opentofu-terraform
     kubeone
     ##
     sqlite
