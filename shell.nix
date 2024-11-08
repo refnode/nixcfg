@@ -1,10 +1,12 @@
 {
   pkgs ? import <nixpkgs> {},
-  shellHook ? "",
+  checks,
   ...
 }:
 pkgs.mkShell {
-  buildInputs = with pkgs; [
+  inherit (checks.pre-commit-check) shellHook;
+  buildInputs = checks.pre-commit-check.enabledPackages;
+  nativeBuildInputs = with pkgs; [
     # Git and nix should always be present in the devshell
     git
     # It's quite handy to have home-manager present in the devshell when
@@ -22,6 +24,4 @@ pkgs.mkShell {
     yq-go
     just
   ];
-
-  inherit shellHook;
 }

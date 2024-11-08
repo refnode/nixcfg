@@ -8,7 +8,7 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    pre-commit-hooks.url = "github:cachix/git-hooks.nix";
     pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -96,25 +96,19 @@
   in {
     formatter = pkgsForEachSystem (pkgs: pkgs.alejandra);
 
+    checks = forEachSystem (
+      system: let
+        pkgs = pkgsFor.${system};
+      in
+        import ./checks {inherit pre-commit-hooks system;}
+    );
+
     devShells = forEachSystem (
       system: let
         pkgs = pkgsFor.${system};
-
-        # based on example
-        # https://github.com/cachix/pre-commit-hooks.nix#nix-flakes-support
-        preCommitCheck = pre-commit-hooks.lib.${system}.run {
-          src = ./.;
-          hooks = {
-            alejandra.enable = true;
-            shellcheck.enable = true;
-            yamllint.enable = true;
-            markdownlint.enable = true;
-            actionlint.enable = true;
-          };
-        };
-        shellHook = preCommitCheck.shellHook;
+        checks = self.checks.${system};
       in {
-        default = import ./shell.nix {inherit pkgs shellHook;};
+        default = import ./shell.nix {inherit pkgs checks;};
       }
     );
 
