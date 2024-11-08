@@ -38,7 +38,7 @@ fzf-git-widget() {
     return 0
   fi
   zle push-line # Clear buffer. Auto-restored on next prompt.
-  # shellcheck disable=SC2034 # wrong interpretation, BUFFER is used by zle accept-line 
+  # shellcheck disable=SC2034 # wrong interpretation, BUFFER is used by zle accept-line
   # shellcheck disable=SC2296
   BUFFER="builtin cd -- ${(q)dir:a}"
   zle accept-line
