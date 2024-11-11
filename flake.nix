@@ -70,19 +70,10 @@
       system:
         import nixpkgs {
           inherit system;
-          overlays = [
-            localOverlays
-          ];
-          # activate unfree when I know that I need it.
-          config.allowUnfree = false;
-        }
-    );
-
-    unstablePkgsFor = nixpkgs.lib.genAttrs supportedSystems (
-      system:
-        import nixpkgs-unstable {
-          inherit system;
-          overlays = [];
+          # overlays = [
+          #   localOverlays
+          # ];
+          overlays = localOverlays;
           # activate unfree when I know that I need it.
           config.allowUnfree = false;
         }
@@ -92,7 +83,9 @@
     # could be also done by just passing additional args to the submodules
     # using the overlay approach, the repo local derivations are addressable
     # by pkgs.myderivation in the submodule
-    localOverlays = import ./overlays;
+    localOverlays = builtins.attrValues (
+      import ./overlays {inherit nixpkgs-unstable;}
+    );
   in {
     formatter = pkgsForEachSystem (pkgs: pkgs.alejandra);
 
@@ -118,12 +111,10 @@
     darwinConfigurations = let
       system = "aarch64-darwin";
       pkgs = pkgsFor.${system};
-      pkgsUnstable = unstablePkgsFor.${system};
     in {
       defiant = import ./lib {
         inherit
           pkgs
-          pkgsUnstable
           nix-darwin
           home-manager
           system
