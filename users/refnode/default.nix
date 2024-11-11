@@ -1,10 +1,18 @@
 {
   pkgs,
-  pkgsUnstable,
   user,
   ...
-}: let
-  userPkgs = with pkgs; [
+}: {
+  imports = [
+    ./modules/zsh.nix
+  ];
+
+  # Don't change this when you change package input. Leave it alone.
+  home.stateVersion = "23.11";
+
+  # specify my home-manager configs
+  # home.packages = userPkgs ++ userPkgsUnstable;
+  home.packages = with pkgs; [
     curl
     less
     htop
@@ -73,64 +81,52 @@
     vdirsyncer
     khard
     khal
-  ];
 
-  userPkgsUnstable = with pkgsUnstable; [
-    fd
-    bat
-    eza
-    ripgrep
-    awscli2
-    google-cloud-sdk
-    lazygit
-    glab
-    graphviz
-    plantuml-c4
-    ffmpeg_7
-    msmtp
-    docker-client
-    fluxcd
-    go
-    gopls
-    goreleaser
-    nodejs_22
-    yubikey-manager
-    platformio
+    unstable.fd
+    unstable.bat
+    unstable.eza
+    unstable.ripgrep
+    unstable.awscli2
+    unstable.google-cloud-sdk
+    unstable.lazygit
+    unstable.glab
+    unstable.graphviz
+    unstable.plantuml-c4
+    unstable.ffmpeg_7
+    unstable.msmtp
+    unstable.docker-client
+    unstable.fluxcd
+    unstable.go
+    unstable.gopls
+    unstable.goreleaser
+    unstable.nodejs_22
+    unstable.yubikey-manager
+    unstable.platformio
     # encryption
-    sops
+    unstable.sops
     # kubernetes tools
-    kubectl
-    kubectx
-    kubelogin
-    kubelogin-oidc
-    krew
-    kustomize
-    kube-linter
-    kubeconform
-    kind
-    k9s
-    stern
-    k6
-    openshift
-    dive
-    crane
-    sonobuoy
-    opentofu
-    kubeone
+    unstable.kubectl
+    unstable.kubectx
+    unstable.kubelogin
+    unstable.kubelogin-oidc
+    unstable.krew
+    unstable.kustomize
+    unstable.kube-linter
+    unstable.kubeconform
+    unstable.kind
+    unstable.k9s
+    unstable.stern
+    unstable.k6
+    unstable.openshift
+    unstable.dive
+    unstable.crane
+    unstable.sonobuoy
+    unstable.opentofu
+    unstable.kubeone
     ##
-    sqlite
-    mob
+    unstable.sqlite
+    unstable.mob
   ];
-in {
-  imports = [
-    ./modules/zsh.nix
-  ];
-
-  # Don't change this when you change package input. Leave it alone.
-  home.stateVersion = "23.11";
-
-  # specify my home-manager configs
-  home.packages = userPkgs ++ userPkgsUnstable;
 
   home.sessionVariables = {
     PAGER = "${pkgs.bat}/bin/bat";
