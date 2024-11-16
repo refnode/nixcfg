@@ -1,8 +1,4 @@
-{
-  pkgs,
-  user,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./modules/zsh.nix
   ];
@@ -134,8 +130,8 @@
     EDITOR = "nvim";
   };
 
-  home.username = "${user}";
-  home.homeDirectory = pkgs.lib.mkForce "/Users/${user}";
+  home.username = "refnode";
+  home.homeDirectory = pkgs.lib.mkForce "/Users/refnode";
 
   programs.home-manager.enable = true;
   programs.neovim = {
