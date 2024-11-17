@@ -4,7 +4,7 @@ SESSION_NAME="mail"
 SESSION_DIR="$HOME/.Mail/private"
 SESSION_CMD="neomutt"
 
-if ! tmux list-session | grep -q "$SESSION_NAME"; then
+if ! tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
   tmux new-session -d -s "$SESSION_NAME" -c "$SESSION_DIR" "$SESSION_CMD"
 fi
 

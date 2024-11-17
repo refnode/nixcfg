@@ -11,7 +11,7 @@
 writeShellApplication {
   name = "ref-main";
 
-  runtimeInputs = [pkgs.tmux pkgs.gnugrep];
+  runtimeInputs = [pkgs.tmux];
 
   # excludeShellChecks = [ "SC2148" ];
   text = builtins.readFile ./script.sh;
