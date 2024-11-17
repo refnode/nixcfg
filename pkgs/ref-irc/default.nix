@@ -5,7 +5,7 @@
 writeShellApplication {
   name = "ref-irc";
 
-  runtimeInputs = [pkgs.tmux pkgs.gnugrep pkgs.weechat-unwrapped];
+  runtimeInputs = [pkgs.tmux pkgs.weechat-unwrapped];
 
   text = builtins.readFile ./script.sh;
 }
