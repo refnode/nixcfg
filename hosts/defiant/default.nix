@@ -22,8 +22,6 @@
       pkgs.bash
       pkgs.zsh
     ];
-
-    loginShell = pkgs.zsh;
   };
 
   fonts = {
