@@ -23,6 +23,7 @@
   }: let
     user = "refnode";
     flake = self;
+    inherit (self) outputs;
 
     lib =
       nixpkgs.lib
@@ -32,6 +33,8 @@
   in {
     inherit lib;
     formatter = lib.refnode.pkgsForEachSystem (pkgs: pkgs.alejandra);
+
+    overlays = import ./overlays {inherit nixpkgs-unstable;};
 
     checks = lib.refnode.forEachSystem (
       system: let
@@ -63,6 +66,16 @@
       };
     };
 
-    nixosConfigurations = {};
+    nixosConfigurations = {
+      isoImage = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/dsn
+        ];
+        specialArgs = {
+          inherit flake inputs outputs;
+        };
+      };
+    };
   };
 }
