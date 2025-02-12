@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./common/core
     ./modules/zsh.nix
   ];
 
@@ -129,9 +130,6 @@
     CLICLOLOR = 1;
     EDITOR = "nvim";
   };
-
-  home.username = "refnode";
-  home.homeDirectory = pkgs.lib.mkForce "/Users/refnode";
 
   programs.home-manager.enable = true;
   programs.neovim = {
