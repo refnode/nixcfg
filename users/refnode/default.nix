@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./common/core
+    ./common/optional/desktop/darwin.nix
   ];
 
   # Don't change this when you change package input. Leave it alone.
@@ -24,7 +25,6 @@
     jasper
     abook
     lf
-    darwin.iproute2mac
     universal-ctags
     ref-rebuild
     ref-sysupdate
