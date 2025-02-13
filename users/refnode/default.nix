@@ -79,7 +79,6 @@
     khal
 
     unstable.fd
-    unstable.bat
     unstable.eza
     unstable.ripgrep
     unstable.awscli2
