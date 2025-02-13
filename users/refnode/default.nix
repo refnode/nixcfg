@@ -4,9 +4,6 @@
     ./common/optional/desktop/darwin.nix
   ];
 
-  # Don't change this when you change package input. Leave it alone.
-  home.stateVersion = "23.11";
-
   # specify my home-manager configs
   # home.packages = userPkgs ++ userPkgsUnstable;
   home.packages = with pkgs; [
