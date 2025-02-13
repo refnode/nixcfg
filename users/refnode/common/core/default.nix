@@ -9,6 +9,9 @@
     ./direnv.nix
     ./bat.nix
   ];
+
+  home.stateVersion = "24.11";
+
   home.username = "refnode";
   home.homeDirectory = pkgs.lib.mkForce "/Users/refnode";
 
