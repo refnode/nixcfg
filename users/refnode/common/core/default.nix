@@ -11,4 +11,6 @@
   ];
   home.username = "refnode";
   home.homeDirectory = pkgs.lib.mkForce "/Users/refnode";
+
+  programs.home-manager.enable = true;
 }
