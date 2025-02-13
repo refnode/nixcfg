@@ -125,12 +125,4 @@
     CLICLOLOR = 1;
     EDITOR = "nvim";
   };
-
-  programs.neovim = {
-    enable = true;
-    package = pkgs.unstable.neovim-unwrapped;
-    defaultEditor = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-  };
 }
