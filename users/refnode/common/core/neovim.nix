@@ -10,5 +10,8 @@
     defaultEditor = true;
     vimAlias = true;
     vimdiffAlias = true;
+    extraPackages = [
+      pkgs.unstable.nixd
+    ];
   };
 }
