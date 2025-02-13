@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./common/core
-    ./modules/zsh.nix
   ];
 
   # Don't change this when you change package input. Leave it alone.
