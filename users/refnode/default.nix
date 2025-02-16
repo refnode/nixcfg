@@ -118,6 +118,7 @@
     ##
     unstable.sqlite
     unstable.mob
+    pkgs.garden
   ];
 
   home.sessionVariables = {
