@@ -11,4 +11,5 @@
   ref-pathlist = pkgs.callPackage ../pkgs/ref-pathlist {};
   ref-git-bare-clone-update = pkgs.callPackage ./ref-git-bare-clone-update {};
   garden = pkgs.callPackage ./garden {};
+  ref-launch-or-focus = pkgs.callPackage ./ref-launch-or-focus {};
 }
