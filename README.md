@@ -3,6 +3,8 @@
 
 # nixcfg
 
+These are some sandbox tests using jj.
+
 My personal Nix configurations to operate my infrastructure.
 
 This configuration may be an inspirations for you, but I highly recommend you
