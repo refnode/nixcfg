@@ -28,6 +28,10 @@
 
         alt-shift-minus = "resize smart -50";
         alt-shift-equal = "resize smart +50";
+        # current calculation for a 49" screen
+        # TODO: call external tool to calculate 2/3 dimension for current screen
+        alt-comma = "resize smart +853";
+        alt-slash = "resize smart -853";
 
         alt-0 = "workspace 0";
         alt-1 = "workspace 1";
@@ -51,8 +55,8 @@
         alt-shift-8 = "move-node-to-workspace 8";
         alt-shift-9 = "move-node-to-workspace 9";
 
-        alt-slash = "layout tiles horizontal vertical";
-        alt-comma = "layout accordion horizontal vertical";
+        # alt-slash = "layout tiles horizontal vertical";
+        # alt-comma = "layout accordion horizontal vertical";
 
         # When the application already runs, jump to the workplace and focus
         # the window, if not running start the application.
