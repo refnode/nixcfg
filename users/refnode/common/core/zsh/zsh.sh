@@ -7,7 +7,7 @@ bindkey -r '^['
 
 # I prefer to leave the vi insert mode and use fzf widgets
 # on vi cmd mode. Align the keymaps the nvim used style.
-bindkey -M vicmd '/' fzf-history-widget
+bindkey -M vicmd ' /' fzf-history-widget
 bindkey -M vicmd ' ff' fzf-file-widget
 bindkey -M vicmd ' fd' fzf-cd-widget
 
