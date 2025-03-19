@@ -9,6 +9,7 @@
     ./direnv.nix
     ./bat.nix
     ./neovim.nix
+    ./tmux.nix
   ];
 
   home.stateVersion = "24.11";
