@@ -123,6 +123,7 @@
     unstable.rust-analyzer
     unstable.talosctl
     unstable.cilium-cli
+    unstable.jujutsu
   ];
 
   home.sessionVariables = {
