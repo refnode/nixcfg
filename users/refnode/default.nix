@@ -119,6 +119,8 @@
     unstable.sqlite
     unstable.mob
     pkgs.garden
+    unstable.cargo
+    unstable.rust-analyzer
   ];
 
   home.sessionVariables = {
