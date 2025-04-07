@@ -122,6 +122,7 @@
     unstable.cargo
     unstable.rust-analyzer
     unstable.talosctl
+    unstable.cilium-cli
   ];
 
   home.sessionVariables = {
