@@ -121,6 +121,7 @@
     pkgs.garden
     unstable.cargo
     unstable.rust-analyzer
+    unstable.talosctl
   ];
 
   home.sessionVariables = {
