@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./systemdefaults.nix
     ./aerospace.nix
     ./service-keepassxc.nix
   ];
