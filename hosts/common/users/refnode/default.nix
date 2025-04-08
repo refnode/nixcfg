@@ -1,11 +1,13 @@
 {
   config,
   pkgs,
+  username,
+  homeDirectory,
   ...
 }: {
-  home-manager.users.refnode = import ../../../../users/refnode/default.nix;
+  home-manager.users.${username} = import ../../../../users/${username}/default.nix;
 
   imports = [
-    ../../../../users/refnode/common/darwin
+    ../../../../users/${username}/common/darwin
   ];
 }
