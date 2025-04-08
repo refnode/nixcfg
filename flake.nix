@@ -52,15 +52,7 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#defiant
     darwinConfigurations = {
-      defiant = lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [./hosts/defiant];
-        specialArgs = {
-          inherit flake inputs;
-          system = "aarch64-darwin";
-          pkgs = lib.refnode.pkgsFor.aarch64-darwin;
-        };
-      };
+      defiant = import ./hosts/defiant {inherit lib flake inputs;};
     };
 
     nixosConfigurations = {};
