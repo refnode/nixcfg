@@ -23,5 +23,6 @@ pkgs.mkShell {
     jq
     yq-go
     just
+    jj # playing with jujutsu
   ];
 }
