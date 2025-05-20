@@ -103,6 +103,7 @@
     unstable.kubelogin-oidc
     unstable.krew
     unstable.kustomize
+    unstable.kubernetes-helm
     unstable.kube-linter
     unstable.kubeconform
     unstable.kind
@@ -124,6 +125,13 @@
     unstable.talosctl
     unstable.cilium-cli
     unstable.jujutsu
+    unstable.minio-client
+    unstable.kanata
+    unstable.himalaya
+
+    unstable.taskwarrior3
+    # unstable.ladybird
+    neomutt
   ];
 
   home.sessionVariables = {
