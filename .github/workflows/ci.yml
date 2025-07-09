@@ -19,7 +19,7 @@ jobs:
       - name: Check Nix flake inputs
         uses: DeterminateSystems/flake-checker-action@v5
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v9
+        uses: DeterminateSystems/nix-installer-action@v18
       - name: Use Github Actions Cache through Magic Nix Cache
         uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Show the flakes metadata and input sources
