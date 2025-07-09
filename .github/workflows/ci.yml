@@ -1,6 +1,6 @@
 ---
 name: "CI"
-on:  # yamllint disable-line rule:truthy
+on: # yamllint disable-line rule:truthy
   pull_request:
   push:
     branches:
@@ -9,6 +9,7 @@ on:  # yamllint disable-line rule:truthy
 jobs:
   flake-general-checks:
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-latest, ubuntu-latest]
     runs-on: ${{matrix.os}}
