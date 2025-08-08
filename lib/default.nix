@@ -55,7 +55,7 @@ in {
           # ];
           overlays = localOverlays;
           # activate unfree when I know that I need it.
-          config.allowUnfree = false;
+          config.allowUnfree = true;
         }
     );
 
