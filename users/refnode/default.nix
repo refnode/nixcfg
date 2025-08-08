@@ -120,8 +120,7 @@
     unstable.sqlite
     unstable.mob
     pkgs.garden
-    unstable.cargo
-    unstable.rust-analyzer
+    unstable.rustup
     unstable.talosctl
     unstable.cilium-cli
     unstable.jujutsu
