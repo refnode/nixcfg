@@ -28,10 +28,9 @@ If have a suggestion to improve something, feel free to open an
 ├── lib                    # high level nix functions used in this repo
 ├── modules                # reusable parts of nix config used in this repo
 ├── overlays               # customizations on existing nixpkgs used in this repo
-├── packages               # my packages
+├── pkgs                   # my packages
 ├── templates              # templates as starting points
-├── users                  # user's $HOME configs
-└── ci.nix                 # the nix develop env used during CI/CD runs
+└── users                  # user's $HOME configs
 ```
 
 ## Getting started
@@ -91,7 +90,7 @@ with the terminal. For rebuilds after configuration changes it's only
 to run
 
 ```bash
-darwin-rebuild switch --flake $HOME/path/to/flake-dir
+sudo darwin-rebuild switch --flake $HOME/path/to/flake-dir
 ```
 
 ## Development
@@ -116,37 +115,6 @@ in the Home Manager project. To let direnv know that it should use the
 shell definition provided by this Flake, the `.envrc` file is needed with
 the content `use flake`.
 
-### Git pre-commit checks
-
-Git pre-commit checks uses the [Git Hooks Mechanism](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks)
-to call an executable before committing changes to you local git repository.
-
-This enables you to define some checks you like to perform, eg. to prevent you
-committing secrets, malformed source code or other stuff you don't like to see
-in the repo.
-
-As a lot of checks are probably similar for many developers, the project
-[pre-commit.com](https://pre-commit.com) provides a flexible tooling to declare
-and integrate checks for this Git Hook.
-
-The Nix Developer Shell in this repo integrates the pre-commit.com tooling and
-uses activate some checks for the pre-commit stage.
-
-It's automatically activated entering the nix shell the first time and can be
-manual prepared performing a command in the nix shell.
-
-```bash
-# Executing a command in the subshell to trigger the pre-commit shell activation
-nix develop --command true
-```
-
-During regular commits, pre-commit only performs checks on file staged for
-commit. A check on all files in the repo can be executed with the followin
-command:
-
-```bash
-nix develop --command pre-commit run --all-files
-```
 
 ### CI/CD
 
