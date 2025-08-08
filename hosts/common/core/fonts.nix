@@ -1,12 +1,8 @@
 {pkgs, ...}: {
   fonts = {
     packages = [
-      (pkgs.nerdfonts.override {
-        fonts = [
-          "JetBrainsMono"
-          "Meslo"
-        ];
-      })
+      pkgs.nerd-fonts.jetbrains-mono
+      pkgs.nerd-fonts.meslo-lg
     ];
   };
 }

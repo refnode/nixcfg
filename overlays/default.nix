@@ -5,7 +5,7 @@
     unstable = import nixpkgs-unstable {
       system = final.system;
       # activate unfree when I know that I need it.
-      config.allowUnfree = false;
+      config.allowUnfree = true;
     };
   };
 }

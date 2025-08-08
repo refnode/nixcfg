@@ -22,4 +22,6 @@
   };
 
   environment.systemPath = ["/opt/homebrew/bin"];
+
+  system.primaryUser = "refnode";
 }
