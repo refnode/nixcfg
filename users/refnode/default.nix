@@ -131,6 +131,7 @@
     unstable.taskwarrior3
     # unstable.ladybird
     neomutt
+    unstable.claude-code
   ];
 
   home.sessionVariables = {
