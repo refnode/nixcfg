@@ -2,7 +2,6 @@
   nix = {
     # package = pkgs.nixVersions.nix_2_16;
     checkConfig = true;
-    configureBuildUsers = true;
     settings = {
       # Necessary for using flakes on this system.
       experimental-features = [
@@ -28,6 +27,6 @@
     };
   };
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  # nix-darwin manages nix-daemon unconditionally when
+  nix.enable = true;
 }

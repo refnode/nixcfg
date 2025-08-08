@@ -29,7 +29,7 @@
     autosuggestion.enable = true;
     autosuggestion.highlight = "fg=#d8dee9,bg=#4c566a";
 
-    initExtra = builtins.readFile ./zsh.sh;
+    initContent = builtins.readFile ./zsh.sh;
   };
 
   # enable the fzf zsh integration by default history, file and directory
