@@ -6,6 +6,7 @@
     ./common/optional/rust.nix
     ./common/optional/mailtools.nix
     ./common/optional/backup.nix
+    ./common/optional/golang.nix
   ];
 
   # specify my home-manager configs
@@ -76,9 +77,6 @@
     unstable.graphviz
     unstable.plantuml-c4
     unstable.ffmpeg_7
-    unstable.go
-    unstable.gopls
-    unstable.goreleaser
     unstable.nodejs_22
     unstable.yubikey-manager
     unstable.platformio
