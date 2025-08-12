@@ -23,7 +23,6 @@
     yamllint
     nodePackages.jsonlint
     mas
-    direnv
     pdfgrep
     jasper
     lf
@@ -37,7 +36,6 @@
     gopass
     gopass-jsonapi
     zenith
-    wezterm
     htmlq
     # crypto
     gnupg
@@ -71,7 +69,6 @@
     unstable.ffmpeg_7
     unstable.nodejs_22
     unstable.yubikey-manager
-    unstable.platformio
     # encryption
     unstable.sops
     ##
