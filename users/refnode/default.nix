@@ -4,6 +4,7 @@
     ./common/optional/desktop/darwin.nix
     ./common/optional/kubernetes.nix
     ./common/optional/rust.nix
+    ./common/optional/mailtools.nix
   ];
 
   # specify my home-manager configs
@@ -22,17 +23,12 @@
     direnv
     pdfgrep
     jasper
-    abook
     lf
     universal-ctags
     ref-rebuild
     ref-sysupdate
     ref-ykey-check
     ref-main
-    ref-mail
-    ref-mail-cd
-    ref-mail-cdv
-    ref-mail-sync
     ref-irc
     ref-pathlist
     ref-git-bare-clone-update
@@ -72,10 +68,6 @@
     just
     #
     vlc-bin-universal
-    # contacts / calendar
-    vdirsyncer
-    khard
-    khal
 
     unstable.fd
     unstable.eza
@@ -87,7 +79,6 @@
     unstable.graphviz
     unstable.plantuml-c4
     unstable.ffmpeg_7
-    unstable.msmtp
     unstable.go
     unstable.gopls
     unstable.goreleaser
@@ -103,11 +94,9 @@
     unstable.jujutsu
     unstable.minio-client
     unstable.kanata
-    unstable.himalaya
 
     unstable.taskwarrior3
     # unstable.ladybird
-    neomutt
     unstable.claude-code
   ];
 
