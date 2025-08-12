@@ -27,7 +27,6 @@
     pdfgrep
     jasper
     lf
-    universal-ctags
     ref-rebuild
     ref-sysupdate
     ref-ykey-check
@@ -78,9 +77,6 @@
     unstable.sops
     ##
     unstable.sqlite
-    unstable.mob
-    pkgs.garden
-    unstable.jujutsu
     unstable.minio-client
     unstable.kanata
 
