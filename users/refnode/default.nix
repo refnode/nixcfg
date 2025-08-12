@@ -8,6 +8,7 @@
     ./common/optional/backup.nix
     ./common/optional/golang.nix
     ./common/optional/development.nix
+    ./common/optional/llmtools.nix
   ];
 
   # specify my home-manager configs
@@ -78,7 +79,6 @@
 
     unstable.taskwarrior3
     # unstable.ladybird
-    unstable.claude-code
   ];
 
   home.sessionVariables = {
