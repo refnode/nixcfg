@@ -2,6 +2,7 @@
   imports = [
     ./common/core
     ./common/optional/desktop/darwin.nix
+    ./common/optional/kubernetes.nix
   ];
 
   # specify my home-manager configs
@@ -86,8 +87,6 @@
     unstable.plantuml-c4
     unstable.ffmpeg_7
     unstable.msmtp
-    unstable.docker-client
-    unstable.fluxcd
     unstable.go
     unstable.gopls
     unstable.goreleaser
@@ -96,33 +95,11 @@
     unstable.platformio
     # encryption
     unstable.sops
-    # kubernetes tools
-    unstable.kubectl
-    unstable.kubectx
-    unstable.kubelogin
-    unstable.kubelogin-oidc
-    unstable.krew
-    unstable.kustomize
-    unstable.kubernetes-helm
-    unstable.kube-linter
-    unstable.kubeconform
-    unstable.kind
-    unstable.k9s
-    unstable.stern
-    unstable.k6
-    unstable.openshift
-    unstable.dive
-    unstable.crane
-    unstable.sonobuoy
-    unstable.opentofu
-    unstable.kubeone
     ##
     unstable.sqlite
     unstable.mob
     pkgs.garden
     unstable.rustup
-    unstable.talosctl
-    unstable.cilium-cli
     unstable.jujutsu
     unstable.minio-client
     unstable.kanata
