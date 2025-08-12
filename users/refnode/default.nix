@@ -39,7 +39,6 @@
     zenith
     wezterm
     htmlq
-    lima
     # crypto
     gnupg
     pwgen

@@ -8,5 +8,6 @@
     ./systemdefaults.nix
     ./aerospace.nix
     ./service-keepassxc.nix
+    ./vm.nix
   ];
 }
