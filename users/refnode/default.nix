@@ -7,6 +7,7 @@
     ./common/optional/mailtools.nix
     ./common/optional/backup.nix
     ./common/optional/golang.nix
+    ./common/optional/development.nix
   ];
 
   # specify my home-manager configs
@@ -33,12 +34,7 @@
     ref-main
     ref-irc
     ref-pathlist
-    ref-git-bare-clone-update
-    cookiecutter
     qmk
-    git-annex
-    git-bug
-    gh
     gopass
     gopass-jsonapi
     zenith
@@ -72,8 +68,6 @@
     unstable.ripgrep
     unstable.awscli2
     unstable.google-cloud-sdk
-    unstable.lazygit
-    unstable.glab
     unstable.graphviz
     unstable.plantuml-c4
     unstable.ffmpeg_7
