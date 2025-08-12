@@ -3,6 +3,7 @@
     ./common/core
     ./common/optional/desktop/darwin.nix
     ./common/optional/kubernetes.nix
+    ./common/optional/rust.nix
   ];
 
   # specify my home-manager configs
@@ -99,7 +100,6 @@
     unstable.sqlite
     unstable.mob
     pkgs.garden
-    unstable.rustup
     unstable.jujutsu
     unstable.minio-client
     unstable.kanata
