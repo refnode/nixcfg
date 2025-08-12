@@ -5,6 +5,7 @@
     ./common/optional/kubernetes.nix
     ./common/optional/rust.nix
     ./common/optional/mailtools.nix
+    ./common/optional/backup.nix
   ];
 
   # specify my home-manager configs
@@ -46,10 +47,6 @@
     # crypto
     gnupg
     pwgen
-    # backup tools
-    borgbackup
-    borgmatic
-    rclone
     tcptraceroute
     unixtools.watch
     fswatch
