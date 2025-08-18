@@ -9,6 +9,7 @@
     ./common/optional/golang.nix
     ./common/optional/development.nix
     ./common/optional/llmtools.nix
+    ./common/optional/vm.nix
   ];
 
   # specify my home-manager configs
