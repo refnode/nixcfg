@@ -18,8 +18,6 @@
     curl
     less
     htop
-    tmux
-    reattach-to-user-namespace
     jq
     yq
     yamllint
@@ -31,7 +29,6 @@
     ref-rebuild
     ref-sysupdate
     ref-ykey-check
-    ref-main
     ref-irc
     ref-pathlist
     qmk

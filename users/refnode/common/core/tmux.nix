@@ -58,4 +58,9 @@
       source-file ~/.config/tmux/local.tmux
     '';
   };
+
+  home.packages = with pkgs; [
+    reattach-to-user-namespace
+    ref-main
+  ];
 }
