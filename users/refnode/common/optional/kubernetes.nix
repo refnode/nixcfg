@@ -9,8 +9,8 @@
     unstable.kubectl
     unstable.kubectl-ktop
     unstable.kubectx
-    unstable.kubelogin
-    unstable.kubelogin-oidc
+    kubelogin
+    kubelogin-oidc
     unstable.krew
     unstable.kustomize
     unstable.kubernetes-helm
