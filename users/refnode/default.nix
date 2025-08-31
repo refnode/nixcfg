@@ -21,7 +21,6 @@
     jq
     yq
     yamllint
-    nodePackages.jsonlint
     mas
     pdfgrep
     jasper
