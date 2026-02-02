@@ -10,6 +10,7 @@
     ./common/optional/development.nix
     ./common/optional/llmtools.nix
     ./common/optional/vm.nix
+    ./common/optional/nix.nix
   ];
 
   # specify my home-manager configs
